@@ -40,3 +40,5 @@ kbd { font-family: var(--font-mono); font-size: .8em; border:1px solid var(--lin
 .prose pre { background: var(--paper-2) !important; border:1px solid var(--line); padding: 1rem 1.25rem; overflow-x:auto; font-size:.85rem; border-radius:2px; }
 .prose pre code { background: none; padding: 0; }
 .dark .astro-code, .dark .astro-code span { color: var(--shiki-dark) !important; }
+
+.tag-demo { display: inline-flex; align-items: center; height: 1.375rem; padding: 0 .5rem; border-radius: 5px; font-family: var(--font-mono); font-size: .6875rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; background: transparent; border: 1px dashed var(--line); color: var(--ink-2); white-space: nowrap; }

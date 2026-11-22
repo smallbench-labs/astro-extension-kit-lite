@@ -17,7 +17,7 @@ const steps = [1, 2, 3] as const;
       <h1 class="mt-6 text-display font-semibold whitespace-pre-line">{t('hero.title')}</h1>
       <p class="mt-6 text-lg text-ink-2 max-w-[44ch] leading-relaxed">{t('hero.lead')}</p>
       <div class="mt-9"><StoreButtons lang={lang} /></div>
-      <p class="mt-5 font-mono text-xs text-ink-2">{product.users} · ★ {product.rating} · {t('store.free')}</p>
+      <p class="mt-5 font-mono text-xs text-ink-2 flex flex-wrap items-center gap-x-2 gap-y-1">{product.users} · ★ {product.rating} · {t('store.free')}{product.demo && <span class="tag-demo" title={t('hero.demoNote')}>{t('hero.demo')}</span>}</p>
     </div>
     <div class="lg:col-span-6"><BrowserMock /></div>
   </section>

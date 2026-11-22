@@ -5,6 +5,7 @@ export const product = {
   version: '1.4.0',
   users: '38,000',
   rating: '4.8',
+  demo: true,
   stores: {
     chrome: 'https://chromewebstore.google.com/',
     edge: 'https://microsoftedge.microsoft.com/addons',

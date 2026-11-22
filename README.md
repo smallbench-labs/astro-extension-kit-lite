@@ -1,19 +1,50 @@
-Full version: themes.formchime.com
-
 # Astro Extension Kit Lite
 
-A free, one-page landing site for a browser extension: hero with store install buttons, browser-window product mock, latest-release strip, "how it works", and a plain-language **permissions explainer** for store review. Astro 7 + Tailwind 4, zero framework JS, light/dark, Lighthouse 100.
+A one-page landing site for a browser extension. Free and MIT-licensed.
 
-**MIT licensed** — use it for anything.
+![Astro Extension Kit Lite home page, light mode](shots/home.png)
 
-## Want the rest?
-The full **[Astro Extension Kit](https://themes.formchime.com/themes/extension-kit/)** adds pricing, docs (Content Collections), changelog, a store-ready privacy policy, a post-install onboarding page, and English / 日本語 / 繁體中文.
+Astro 7 + Tailwind CSS 4, static output, no framework JavaScript (two small inline scripts: light/dark mode and Esc to close the menu). Lighthouse 100 in all four categories, light and dark (mobile profile, local build, 2026-11-19).
+
+## What's on the page
+- **Hero with install buttons** for the Chrome Web Store, Microsoft Edge Add-ons and Firefox Add-ons.
+- **Browser-window product mock** you can replace with a screenshot of your extension.
+- **Latest-release strip**, read from the newest Markdown file in `src/content/changelog/en/`.
+- **How it works**, three steps.
+- **Permissions table**: one row per permission, with why your extension needs it and what it never does with it. Store reviewers and users both read this.
+- Light and dark mode, one CSS variable to recolor.
 
 ## Use
 ```bash
-nvm use && npm install && npm run dev
+nvm use && npm install && npm run dev   # Node 22, http://localhost:4321
+npm run build                           # outputs ./dist
 ```
-Edit `src/site.config.ts` (name, version, store links, permissions) and `src/i18n/ui.ts` (copy). Recolor via `--signal` in `src/styles/global.css`. Build with `npm run build`, deploy `dist/` to Cloudflare Pages, Netlify or Vercel (Node 22).
+1. `src/site.config.ts`: name, version, store links and the list of permissions.
+2. `src/i18n/ui.ts`: the page copy, including the "why" and "never" text for each permission.
+3. `src/content/changelog/en/`: one Markdown file per release.
+4. Recolor with `--signal` in `src/styles/global.css`.
+
+Deploy `dist/` to Cloudflare Pages, Netlify, Vercel or any static host (Node 22).
 
 ## Before you go live
-Replace the demo user count and rating (`users`, `rating` in `src/site.config.ts`), the changelog entry and store URLs with your real values.
+The demo user count and rating (`users`, `rating` in `src/site.config.ts`) are labelled on the page as demo figures, in every language. Replace them — and the changelog entries and store URLs — with your real ones before you go live. Publishing made-up ratings can break store and consumer-protection rules.
+
+## Lite or the full kit
+Lite is a complete landing page and stays free. The paid **[Astro Extension Kit](https://themes.formchime.com/themes/extension-kit/#lite-vs-full)** is for the day you submit to a store and need the rest of the paperwork.
+
+| | Lite (this repo) | Full kit |
+|---|---|---|
+| License | MIT | Commercial: unlimited projects, client work allowed |
+| Pages | One landing page | Home, pricing, docs, changelog, what's new, privacy policy, welcome, uninstall |
+| Languages | English | English, 日本語, 繁體中文 |
+| Permissions table | Written by hand in `site.config.ts` | Generated from your `manifest.json`; the build fails on a permission with no explanation |
+| Privacy policy | — | Full template, including Chrome Web Store Limited Use and Firefox data collection |
+| Store images and listing copy | — | Screenshot frames, promo tiles and icons exported as PNG; listing copy checked against store limits |
+| Install button | Links to all three stores | Matches the visitor's browser; UTM tags; "Installed" state in Chrome and Edge (other browsers keep the install button); email-me link on phones |
+| Welcome, what's new, uninstall pages | — | All three, plus the `background.js` code that opens them |
+| Pricing page | — | ExtensionPay, Polar or any checkout link, monthly / yearly |
+
+The full kit is US$39 once, with 12 months of updates; the code is yours to keep. Compare them side by side, with screenshots, at **[themes.formchime.com/themes/extension-kit](https://themes.formchime.com/themes/extension-kit/#lite-vs-full)**.
+
+## License
+MIT. See `LICENSE`. Questions: support@formchime.com.
