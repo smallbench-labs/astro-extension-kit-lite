@@ -1,8 +1,10 @@
+**[Full version US$39](https://themes.formchime.com/themes/extension-kit/)**
+
+![Astro Extension Kit Lite home page, light mode](shots/home.png)
+
 # Astro Extension Kit Lite
 
 A one-page landing site for a browser extension. Free and MIT-licensed.
-
-![Astro Extension Kit Lite home page, light mode](shots/home.png)
 
 Astro 7 + Tailwind CSS 4, static output, no framework JavaScript (two small inline scripts: light/dark mode and Esc to close the menu). Lighthouse 100 in all four categories, light and dark (mobile profile, local build, 2026-11-19).
 
